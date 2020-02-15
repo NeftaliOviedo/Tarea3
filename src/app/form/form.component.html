@@ -1,0 +1,17 @@
+<ion-list>
+    <ion-item>
+        <ion-label></ion-label>
+        <ion-input [(ngModel)]="nombre" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label></ion-label>
+        <ion-input [(ngModel)]="imagen" placeholder="Imagen del Lugar(url)"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label></ion-label>
+        <ion-input [(ngModel)]="ubicacion" type="text" placeholder="Ubicacion(link Maps)"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-button block type="submit" (click)="newLugar();" color="medium" size="default">Crear</ion-button>
+    </ion-item>
+</ion-list>
