@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Lugar, descLugar } from '../logic/lugares';
-import { EnviarLugarService } from '../service/enviar-lugar.service';
+import { Lugar, descLugar } from '../lugares';
+import { EnviarLugarService } from '../../service/enviar-lugar.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
     this.lista = this.lugar.getLugaresListado();
     this.enviarService.sendObjectSource(this.lista);
   }
- 
+
   ngOnInit() {}
 
 }

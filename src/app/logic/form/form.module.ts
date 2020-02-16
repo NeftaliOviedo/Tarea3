@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { FormComponent } from './form.component';
-import { ListadoLugaresComponentModule } from '../logic/listado-lugares/listado.module';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, IonicModule, ListadoLugaresComponentModule],
+    imports: [CommonModule, FormsModule, IonicModule],
     declarations: [FormComponent],
     exports: [FormComponent]
 })

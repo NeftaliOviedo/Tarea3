@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { EnviarLugarService } from '../service/enviar-lugar.service';
+import { EnviarLugarService } from '../../service/enviar-lugar.service';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',

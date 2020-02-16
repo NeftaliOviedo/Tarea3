@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Lugar, descLugar } from '../logic/lugares';
+import { Lugar, descLugar } from '../../logic/lugares';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-tab1',

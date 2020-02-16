@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from '../logic/tabs/tabs.page';
+import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../Presentacion/tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../../Presentacion/tab1/tab1.module').then(m => m.Tab1PageModule)
           }
         ]
       },
@@ -23,7 +23,7 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../Presentacion/tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../../Presentacion/tab2/tab2.module').then(m => m.Tab2PageModule)
           }
         ]
       },
@@ -38,7 +38,6 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
-    
   }
 ];
 
