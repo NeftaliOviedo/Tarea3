@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Lugar, descLugar } from '../lugares';
-import { EnviarLugarService } from '../../service/enviar-lugar.service';
+import { FirestoreService } from 'src/app/services/firestore/firestore.service';
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss'],
+  selector: "app-form",
+  templateUrl: "./form.component.html",
+  styleUrls: ["./form.component.scss"]
 })
 export class FormComponent implements OnInit {
   lista: descLugar[] = [];
@@ -12,16 +12,23 @@ export class FormComponent implements OnInit {
   imagen: string;
   ubicacion: string;
   lugar;
-  constructor(private enviarService: EnviarLugarService) {
+  constructor(private firestoreService: FirestoreService) {
+ 
   }
-  
+
   newLugar() {
-    this.lugar =   new Lugar(this.nombre, this.ubicacion, this.imagen);
+    this.lugar = new Lugar(this.nombre, this.ubicacion, this.imagen);
     this.lugar.createLugar();
     this.lista = this.lugar.getLugaresListado();
-    this.enviarService.sendObjectSource(this.lista);
+    this.firestoreService.createLugarF(this.lugar.getLugar()).then(
+      () => {
+        console.log("Documento creado exitósamente!");
+      },
+      error => {
+        console.error(error);
+      }
+    );;
   }
-
+  
   ngOnInit() {}
-
 }

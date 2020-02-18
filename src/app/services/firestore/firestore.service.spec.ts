@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnviarLugarService } from './enviar-lugar.service';
+import { FirestoreService } from './firestore.service';
 
-describe('EnviarLugarService', () => {
+describe('FirestoreService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: EnviarLugarService = TestBed.get(EnviarLugarService);
+    const service: FirestoreService = TestBed.get(FirestoreService);
     expect(service).toBeTruthy();
   });
 });

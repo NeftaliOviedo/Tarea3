@@ -1,17 +1,17 @@
-<ion-list>
+<form (ngSubmit)="newLugar();">
     <ion-item>
         <ion-label></ion-label>
-        <ion-input [(ngModel)]="nombre" placeholder="Nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label></ion-label>
-        <ion-input [(ngModel)]="imagen" placeholder="Imagen del Lugar(url)"></ion-input>
+        <ion-input [(ngModel)]="nombre" name="nombre" placeholder="Nombre"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label></ion-label>
-        <ion-input [(ngModel)]="ubicacion" type="text" placeholder="Ubicacion"></ion-input>
+        <ion-input [(ngModel)]="imagen" name="imagen" placeholder="Imagen del Lugar(url)"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-button block type="submit" (click)="newLugar();" color="medium" size="default">Crear</ion-button>
+        <ion-label></ion-label>
+        <ion-input [(ngModel)]="ubicacion" name="ubicacion" type="text" placeholder="Ubicacion"></ion-input>
     </ion-item>
-</ion-list>
+    <ion-item>
+        <ion-button block type="submit" color="medium" size="default">Crear</ion-button>
+    </ion-item>
+</form>
